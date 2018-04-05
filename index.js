@@ -18,12 +18,12 @@ function handleAdd (text){
   `);
 }
 
-function handleCheck() {
-
+function handleCheck(item) {
+  item.toggleClass('shopping-item__checked');
 }
 
-function handleDelete() {
-
+function handleDelete(item) {
+  item.remove();
 }
 
 function main() {
@@ -53,6 +53,8 @@ function main() {
       handleDelete(deletedItem);
     });
   }
+  addCheckEvent(event);
+  addDeleteEvent(event);
 }
 
 $(main);
